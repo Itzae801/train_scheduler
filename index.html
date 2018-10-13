@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase Train Schedule</title>
+
+    <!-- BootStrap link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- CSS link -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-inverse">
+        <a class="navbar-brand" href="https://firebase.google.com/">
+            
+        </a>
+        <div class="container text-right">
+
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid text-center bottom">
+        <div class="container">
+            <h1 class="display-4">Train Schedule</h1>
+            
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row top">
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="assets/images/train.jpg" alt="Card image cap" width="150" height="150" margin-top="10px">
+                    <div class="card-body">
+                        <h3 class="card-title">Information and Directory</h3>
+                        <p class="card-text">Fill in the fields to generate information on your specific train.</p>
+                        <p class="card-text">Returned data will show the train name, destination, frequency, next arrival and minutes away.</p>
+                        <p class="card-text">Each new search will update the form to the most recent query.</p>
+                        <p class="card-text">Press Clear to clear out the form information.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div id="table-display">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency(min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody id="information"></tbody>
+                            <td></td>
+                    </table>
+                </div>
+
+                <form id="myForm">
+                    <div class="form-group">
+                        <label for="trainName-box">Train Name</label>
+                        <input type="text" class="form-control" id="train-name" aria-describedby="inputText" placeholder="Enter a train name">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination-box">Destination</label>
+                        <input type="text" class="form-control" id="destination" placeholder="Enter a destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="time-box">First Train Time(HH:mm - military time)</label>
+                        <input type="text" class="form-control" id="time" placeholder="Enter a time">
+                      </div>
+                    <div class="form-group">
+                        <label for="frequency-box">Frequency(min)</label>
+                        <input type="text" class="form-control" id="frequency" placeholder="Enter the train frequency">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                    <button type="submit" class="btn btn-primary" id="clear">Clear</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-inverse text-center fixed-bottom" id="copyright">
+            &copy;Copyright Itzae801 2018
+    </nav>
+
+<!-- Moment.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+<!-- Firebase Link -->
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<!-- jQuery Link -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<!-- JavaScript Link -->
+<script src="assets/javascript/javascript.js"></script>
+</body>
+</html>
